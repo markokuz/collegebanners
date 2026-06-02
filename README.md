@@ -1,6 +1,6 @@
 # Posterized
 
-A playful, modern landing site for **Posterized** — curated poster prints and wall art. Built with Next.js and deployed on Vercel.
+A playful, modern landing site for **Posterized**, curated poster prints and wall art. Built with Next.js and deployed on Vercel.
 
 ## Stack
 
@@ -30,7 +30,7 @@ npm start
 1. Push this repo to GitHub.
 2. Go to [vercel.com/new](https://vercel.com/new) and import the repository.
 3. Framework preset: **Next.js** (auto-detected).
-4. Deploy — no environment variables required for v1.
+4. Deploy. No environment variables required for v1.
 
 Add a custom domain in the Vercel project **Settings → Domains** when ready.
 
@@ -41,7 +41,6 @@ Add a custom domain in the Vercel project **Settings → Domains** when ready.
 | Contact email | `lib/posters.ts` → `CONTACT_EMAIL` |
 | Accent color | `app/globals.css` → `--accent` |
 | Poster images | Add files to `public/posters/` and list them in `lib/posters.ts` |
-| Social links | `components/Footer.tsx` |
 | Site URL (sitemap) | `app/sitemap.ts` |
 
 ## Project structure

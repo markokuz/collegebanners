@@ -32,7 +32,7 @@ export function Hero() {
     <section
       ref={containerRef}
       id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden pt-16"
+      className="relative flex min-h-screen items-center overflow-x-clip pt-16"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
         mouseX.set(0);
@@ -40,10 +40,10 @@ export function Hero() {
       }}
     >
       <div className="mesh-bg" aria-hidden />
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center">
-        <div className="relative z-20">
+      <div className="relative z-10 mx-auto grid w-full min-w-0 max-w-6xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center">
+        <div className="relative z-20 min-w-0 w-full">
           <motion.h1
-            className="font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-fg sm:text-7xl lg:text-8xl"
+            className="font-display max-w-full text-[clamp(2.25rem,11.5vw,3.5rem)] font-extrabold leading-[0.95] tracking-tight text-fg sm:text-6xl md:text-7xl lg:text-8xl"
             initial={reduced ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}

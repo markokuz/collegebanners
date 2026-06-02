@@ -2,7 +2,7 @@ const MARQUEE_ITEMS = [
   { text: "POSTERIZED", accent: true },
   { text: "CAMPUS POPUPS", accent: false },
   { text: "UNIVERSITIES", accent: true },
-  { text: "RESELLER PICKS", accent: false },
+  { text: "CURATOR PICKS", accent: false },
   { text: "MIXED STYLES", accent: true },
   { text: "POP UP SHOP", accent: false },
 ] as const;

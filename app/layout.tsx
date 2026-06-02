@@ -15,16 +15,16 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Posterized — Campus poster popups",
+  title: "Posterized | Campus poster popups",
   description:
-    "University popup resellers. Mixed poster styles from brands and artists we love — rarely our own designs.",
+    "University popup curator picks from two recent grads. Mixed poster styles from brands and artists we love. Rarely our own designs.",
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "Posterized — Campus poster popups",
+    title: "Posterized | Campus poster popups",
     description:
-      "University popup resellers. Mixed poster styles from brands and artists we love — rarely our own designs.",
+      "University popup curator picks from two recent grads. Mixed poster styles from brands and artists we love. Rarely our own designs.",
     type: "website",
   },
 };

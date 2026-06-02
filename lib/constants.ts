@@ -1,5 +1,5 @@
 export const NAV_SECTIONS = [
-  { id: "about", label: "About" },
+  { id: "about", label: "About us" },
   { id: "work", label: "Work" },
   { id: "contact", label: "Contact" },
 ] as const;
