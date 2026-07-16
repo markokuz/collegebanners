@@ -6,10 +6,10 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 sm:flex-row sm:items-end">
         <div className="text-center sm:text-left">
           <p className="font-display text-lg font-bold text-fg">
-            poster<span className="text-accent">i</span>zed
+            college<span className="text-accent">banners</span>
           </p>
           <p className="mt-2 text-sm text-muted">
-            © {new Date().getFullYear()} Posterized
+            © {new Date().getFullYear()} Collegebanners
           </p>
         </div>
 

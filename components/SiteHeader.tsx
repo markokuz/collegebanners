@@ -33,9 +33,9 @@ export function SiteHeader() {
         <a
           href="#"
           className="font-display text-lg font-bold tracking-tight text-fg"
-          aria-label="Posterized home"
+          aria-label="Collegebanners home"
         >
-          poster<span className="text-accent">i</span>zed
+          college<span className="text-accent">banners</span>
         </a>
         <nav className="flex items-center gap-4 sm:gap-8" aria-label="Main">
           {NAV_SECTIONS.map(({ id, label }) => (

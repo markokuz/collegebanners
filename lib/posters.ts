@@ -52,4 +52,4 @@ export const heroStackPresets: PosterPreset[] = [
   { ...posterPresets[16], rotate: 10 },
 ];
 
-export const CONTACT_EMAIL = "posterizedcanada@gmail.com";
+export const CONTACT_EMAIL = "collegebanners@gmail.com";

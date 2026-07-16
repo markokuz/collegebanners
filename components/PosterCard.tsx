@@ -41,7 +41,7 @@ export function PosterCard({ poster, styleY }: PosterCardProps) {
   return (
     <motion.article
       ref={ref}
-      className="group cursor-default border border-border bg-bg transition-shadow hover:shadow-[0_0_40px_rgba(255,45,106,0.15)]"
+      className="group cursor-default border border-border bg-bg transition-shadow hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]"
       style={{
         y: styleY,
         rotateX: springRotateX,

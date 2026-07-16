@@ -48,9 +48,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            poster
-            <span className="text-accent">i</span>
-            zed
+            college
+            <span className="text-accent">banners</span>
           </motion.h1>
           <motion.p
             className="mt-6 max-w-sm text-lg text-muted"

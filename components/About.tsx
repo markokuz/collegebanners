@@ -15,7 +15,7 @@ export function About() {
           </h2>
           <div className="mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-muted">
             <p>
-              Posterized is run by two recent university graduates who still
+              Collegebanners is run by two recent university graduates who still
               remember dorm move-in, cramped walls, and the hunt for something
               that actually feels like you. We started this because we get what
               students want: bold prints, familiar artists, and prices that make
