@@ -2,7 +2,7 @@
 
 import { PosterCard } from "@/components/PosterCard";
 import { SectionReveal } from "@/components/SectionReveal";
-import { posterPresets, type PosterPreset } from "@/lib/posters";
+import { workItems, type WorkItem } from "@/lib/posters";
 import { useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 
@@ -30,10 +30,10 @@ export function Gallery() {
         </SectionReveal>
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {posterPresets.map((poster, i) => (
+          {workItems.map((item, i) => (
             <ParallaxCard
-              key={poster.id}
-              poster={poster}
+              key={item.id}
+              item={item}
               index={i}
               scrollYProgress={scrollYProgress}
             />
@@ -45,15 +45,15 @@ export function Gallery() {
 }
 
 function ParallaxCard({
-  poster,
+  item,
   index,
   scrollYProgress,
 }: {
-  poster: PosterPreset;
+  item: WorkItem;
   index: number;
   scrollYProgress: MotionValue<number>;
 }) {
   const base = (index % 3) - 1;
   const y = useTransform(scrollYProgress, [0, 1], [base * 24, base * -24]);
-  return <PosterCard poster={poster} styleY={y} />;
+  return <PosterCard item={item} styleY={y} />;
 }

@@ -1,7 +1,6 @@
 "use client";
 
-import { PosterMedia } from "@/components/PosterMedia";
-import type { PosterPreset } from "@/lib/posters";
+import type { WorkItem } from "@/lib/posters";
 import {
   motion,
   type MotionValue,
@@ -12,11 +11,11 @@ import {
 import { useRef } from "react";
 
 type PosterCardProps = {
-  poster: PosterPreset;
+  item: WorkItem;
   styleY?: MotionValue<number>;
 };
 
-export function PosterCard({ poster, styleY }: PosterCardProps) {
+export function PosterCard({ item, styleY }: PosterCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const rotateX = useMotionValue(0);
@@ -53,15 +52,14 @@ export function PosterCard({ poster, styleY }: PosterCardProps) {
       whileHover={reduced ? undefined : { scale: 1.02 }}
       transition={{ type: "spring", stiffness: 400, damping: 25 }}
     >
-      <PosterMedia
-        poster={poster}
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      />
-      <div className="flex items-center justify-between border-t border-border px-4 py-3">
-        <span className="font-display text-xs font-semibold uppercase tracking-widest text-fg">
-          {poster.label}
+      <div className="flex min-h-[120px] items-center px-6 py-8">
+        <span className="font-display text-lg font-bold uppercase tracking-widest text-fg">
+          {item.label}
         </span>
-        <span className="text-xs text-muted">#{poster.id}</span>
+      </div>
+      <div className="flex items-center justify-between border-t border-border px-4 py-3">
+        <span className="text-xs text-muted">Category</span>
+        <span className="text-xs text-muted">#{item.id}</span>
       </div>
     </motion.article>
   );

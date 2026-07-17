@@ -1,7 +1,6 @@
 "use client";
 
-import { PosterMedia } from "@/components/PosterMedia";
-import { heroStackPresets } from "@/lib/posters";
+import { heroStackItems } from "@/lib/posters";
 import {
   motion,
   useMotionValue,
@@ -71,10 +70,10 @@ export function Hero() {
         </div>
 
         <div className="relative z-10 mx-auto h-[420px] w-full max-w-md sm:h-[480px] lg:ml-auto lg:translate-x-10 xl:translate-x-14">
-          {heroStackPresets.map((poster, i) => (
-            <FloatingPoster
-              key={poster.id}
-              poster={poster}
+          {heroStackItems.map((item, i) => (
+            <FloatingCard
+              key={item.id}
+              item={item}
               index={i}
               springX={springX}
               springY={springY}
@@ -87,14 +86,14 @@ export function Hero() {
   );
 }
 
-function FloatingPoster({
-  poster,
+function FloatingCard({
+  item,
   index,
   springX,
   springY,
   reduced,
 }: {
-  poster: (typeof heroStackPresets)[number];
+  item: (typeof heroStackItems)[number];
   index: number;
   springX: ReturnType<typeof useSpring>;
   springY: ReturnType<typeof useSpring>;
@@ -113,29 +112,22 @@ function FloatingPoster({
 
   return (
     <motion.div
-      className="absolute w-[55%] border border-border bg-bg shadow-2xl"
+      className="absolute w-[55%] border border-border bg-bg px-5 py-8 shadow-2xl"
       style={{
         top: pos.top,
         left: pos.left,
         zIndex: pos.z,
         x,
         y,
-        rotate: poster.rotate ?? 0,
+        rotate: item.rotate ?? 0,
       }}
       initial={reduced ? false : { opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
     >
-      <PosterMedia
-        poster={poster}
-        priority={index === 0}
-        sizes="(max-width: 1024px) 55vw, 280px"
-      />
-      <div className="border-t border-border px-3 py-2">
-        <span className="font-display text-xs font-semibold uppercase tracking-widest text-muted">
-          {poster.label}
-        </span>
-      </div>
+      <span className="font-display text-sm font-bold uppercase tracking-widest text-fg sm:text-base">
+        {item.label}
+      </span>
     </motion.div>
   );
 }
