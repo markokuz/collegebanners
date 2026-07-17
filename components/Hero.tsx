@@ -57,7 +57,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
           >
-            Campus popups. Posters you want.
+            Campus popups. Banners you want.
           </motion.p>
           <motion.a
             href="#contact"
